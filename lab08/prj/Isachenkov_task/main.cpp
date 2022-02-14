@@ -25,6 +25,10 @@ string Equality(double a, double b){
 
 float s_calculator(int x, int y, int z){
     double S;
+    cout << "\nЗмінна x(" << x << ") в шістнадцятковій системі числення = " << hex << x;
+    cout << "\nЗмінна y(" << y << ") в шістнадцятковій системі числення = " << hex << y;
+    cout << "\nЗмінна z(" << z << ") в шістнадцятковій системі числення = " << hex << z;
+    cout << "\n\nФункція s_calculation: ";
     S = s_calculation(x,y,z);
     return S;
 }
@@ -35,15 +39,16 @@ int main()
     cout << Annotations();
     cout << "\nВведіть значення x: ";
     cin >> x;
-    cout << "\nВведіть значення y: ";
+    cout << "Введіть значення y: ";
     cin >> y;
-    cout << "\nВведіть значення z: ";
+    cout << "Введіть значення z: ";
     cin >> z;
-    cout << "\nВведіть значення a: ";
+    cout << "Введіть значення a: ";
     cin >> a;
-    cout << "\nВведіть значення b: ";
+    cout << "Введіть значення b: ";
     cin >> b;
     cout << Equality(a, b);
-    cout << endl << endl << "Функція s_calculation: "<<s_calculator(x,y,z) << endl;
+    cout << endl << s_calculator(x,y,z) << endl;
+    system("pause");
     return 0;
 }
