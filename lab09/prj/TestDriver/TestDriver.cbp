@@ -16,11 +16,7 @@
 					<Add directory="C:/Users/user/Desktop/GitHub/Isachenkov-Eduard-KB-21/lab09/prj/Modules" />
 				</Compiler>
 				<Linker>
-					<Add option="-static-libstdc++" />
-					<Add option="-static-libgcc" />
-					<Add option="-static" />
 					<Add library="C:/Users/user/Desktop/GitHub/Isachenkov-Eduard-KB-21/lab09/prj/ModulesIsachenkov/bin/Debug/libModulesIsachenkov.a" />
-					<Add directory="C:/Users/user/Desktop/GitHub/Isachenkov-Eduard-KB-21/lab09/prj/ModulesIsachenkov/bin/Debug" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -40,8 +36,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="C:/Users/user/Desktop/GitHub/Isachenkov-Eduard-KB-21/lab09/prj/Modules/ModulesIsachenkov.h" />
 		<Unit filename="main.cpp" />
-		<Extensions />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
