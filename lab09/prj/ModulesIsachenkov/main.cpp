@@ -29,17 +29,15 @@ int Task_9_1(int posadOklad, int zarobPlata, int year){
     return number1;
 }
 
-struct temperature{
-    double celsia;
-    double farangeit;
-};
 
 
-temperature Task_9_2(int one, int two, int three, int four, int five, int six){
-    temperature t;
-    t.celsia = (one+two+three+four+five+six)/6;
-    t.farangeit = (32 + 1.8 * t.celsia);
-    return t;
+
+int Task_9_2(int one, int two, int three, int four, int five, int six){
+    int celsia;
+    int farangeit;
+    celsia = (one+two+three+four+five+six)/6;
+    farangeit = (32 + 1.8 * celsia);
+    return celsia;
 }
 
 int Task_9_3(int N){
