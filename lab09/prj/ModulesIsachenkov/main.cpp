@@ -32,21 +32,25 @@ int Task_9_1(int posadOklad, int zarobPlata, int year){
 
 
 
-int Task_9_2(int one, int two, int three, int four, int five, int six){
+int Task_9_2_1(int one, int two, int three, int four, int five, int six){
     int celsia;
-    int farangeit;
     celsia = (one+two+three+four+five+six)/6;
-    farangeit = (32 + 1.8 * celsia);
     return celsia;
+}
+
+int Task_9_2_2(int celsia){
+    int farangeit;
+    farangeit = (32 + 1.8 * celsia);
+    return farangeit;
 }
 
 int Task_9_3(int N){
     bitset<32>b_number(N);
     if (N >= 0 && N < 10008000){
-        if (b_number[11] == 0){
+        if (b_number[10] == 0){
             return 32-b_number.count();
         }
-        else if (b_number[11] == 1){
+        else if (b_number[10] == 1){
             return b_number.count();
         }
     }
@@ -54,3 +58,5 @@ int Task_9_3(int N){
         return 0;
     }
 }
+
+
