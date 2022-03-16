@@ -13,10 +13,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="C:/Users/user/Desktop/GitHub/Isachenkov-Eduard-KB-21/lab09/prj/Modules" />
+					<Add directory="../Modules" />
 				</Compiler>
 				<Linker>
-					<Add library="C:/Users/user/Desktop/GitHub/Isachenkov-Eduard-KB-21/lab09/prj/ModulesIsachenkov/bin/Debug/libModulesIsachenkov.a" />
+					<Add library="../ModulesIsachenkov/bin/Debug/libModulesIsachenkov.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">

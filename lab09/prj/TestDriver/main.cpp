@@ -28,7 +28,7 @@ void testdriver_2(void){
     int num2_2[3] = {49,   37,    64};
     cout << "\nTest Task_9_2\n";
     for(int i = 0; i < 3; i++){
-        if (Task_9_2(one[i], two[i], three[i], four[i], five[i], six[i]) == num2_1[i])
+        if ((Task_9_2_1(one[i], two[i], three[i], four[i], five[i], six[i]) == num2_1[i]) && (Task_9_2_2((Task_9_2_1(one[i], two[i], three[i], four[i], five[i], six[i])) == num2_2[i])))
             cout << "\nTest case #0" << i+1 << " PASSED.\n";
         else
             cout << "\nTest case #0" << i+1 << " FAILED.\n";
@@ -37,7 +37,7 @@ void testdriver_2(void){
 
 void testdriver_3(void){
     int N[3] = {1234567, 7654321, 57210};
-    int k[3] = {21,      13,      12};
+    int k[3] = {11,      19,      12};
     cout << "\nTest Task_9_3\n";
     for(int i = 0; i < 3; i++){
        if (Task_9_3(N[i]) == k[i])
