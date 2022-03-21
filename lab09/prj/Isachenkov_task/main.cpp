@@ -11,56 +11,56 @@ int main()
     Annotations();
     char value;
     do{
-        cout << "\n\nВиберiть функцiю, яку хочете використати:"
-            << "\n(щоб використати впишiть ту кнопку, яка вказана бiля функцiї):"
-            << "\nz - викликається функцiя s_calulation"
-            << "\nr - викликається функцiя Task 9.1"
-            << "\ns - викликається функцiя Task 9.2"
-            << "\nt - викликається функцiя Task 9.3"
-            << "\nq - вихiд з додатку" << endl << endl;
+        cout << "\n\nSelect the function you want to use:"
+            << "\n(to use, enter the button next to the function):"
+            << "\nz - the function is called s_calculation"
+            << "\nr - the function is called Task 9.1"
+            << "\ns - the function is called Task 9.2"
+            << "\nt - the function is called Task 9.3"
+            << "\nq - exit the application" << endl << endl;
         cin >> value;
         if (value == 'z'){
             int x, y, z;
-            cout << "Введiть x: = ";
+            cout << "Enter x: = ";
             cin >> x;
-            cout << "\nВведiть y: = ";
+            cout << "\nEnter y: = ";
             cin >> y;
-            cout << "\nВведiть z: = ";
+            cout << "\nEnter z: = ";
             cin >> z;
             cout << "S: = " << s_calculation(x, y, z);
         }
         if (value == 'r'){
             double posadOklad, zarobPlata;
             int year;
-            cout << "Введiть розмiр посадового окладу(грн.): " << endl;
+            cout << "Enter the amount of salary (UAH): " << endl;
             cin >> posadOklad;
-            cout << "Введiть розмiр заробiтньої плати працiвника(грн.): " << endl;
+            cout << "Enter the amount of the employee's salary (UAH): " << endl;
             cin >> zarobPlata;
-            cout << "Стаж роботи на пiдприємствi(рокiв): " << endl;
+            cout << "Work experience at the enterprise (years): " << endl;
             cin >> year;
-            cout << "Сума до виплати(грн.): " << Task_9_1(posadOklad, zarobPlata, year);
+            cout << "Amount to be paid (UAH): " << Task_9_1(posadOklad, zarobPlata, year);
         }
         if (value == 's'){
             double one, two, three, four, five, six;
-            cout << "\nВведiть зафiксовану температуру повiтря (за шкалою Цельсiя) о 00:00 = ";
+            cout << "\nEnter the fixed air temperature (Celsius) о 00:00 = ";
             cin >> one;
-            cout << "Введiть зафiксовану температуру повiтря (за шкалою Цельсiя) о 04:00 = ";
+            cout << "Enter the fixed air temperature (Celsius) о 04:00 = ";
             cin >> two;
-            cout << "Введiть зафiксовану температуру повiтря (за шкалою Цельсiя) о 08:00 = ";
+            cout << "Enter the fixed air temperature (Celsius) о 08:00 = ";
             cin >> three;
-            cout << "Введiть зафiксовану температуру повiтря (за шкалою Цельсiя) о 12:00 = ";
+            cout << "Enter the fixed air temperature (Celsius) о 12:00 = ";
             cin >> four;
-            cout << "Введiть зафiксовану температуру повiтря (за шкалою Цельсiя) о 16:00 = ";
+            cout << "Enter the fixed air temperature (Celsius) о 16:00 = ";
             cin >> five;
-            cout << "Введiть зафiксовану температуру повiтря (за шкалою Цельсiя) о 20:00 = ";
+            cout << "Enter the fixed air temperature (Celsius) о 20:00 = ";
             cin >> six;
-            cout << "\nСередньодобова температура за шкалою Цельсiя: " << Task_9_2_1(one, two, three, four, five, six) << endl;
-            cout << "Середньодобова температура за шкалою Фарангейта: " << Task_9_2_2(Task_9_2_1(one, two, three, four, five, six)) << endl;
+            cout << "\nAverage daily temperature on the Celsius scale: " << Task_9_2_1(one, two, three, four, five, six) << endl;
+            cout << "The average daily temperature on the Fahrenheit scale: " << Task_9_2_2(Task_9_2_1(one, two, three, four, five, six)) << endl;
 
         }
         if (value == 't'){
             int N, t;
-            cout << "\nВведiть число N вiд 0 до 10008000: ";
+            cout << "\nEnter the number N from 0 to 10008000: ";
             cin >> N;
             cout << "N: = " << Task_9_3(N);
         }
@@ -76,5 +76,5 @@ int main()
 }
 
 void Annotations(){
-    cout << " __________________________________________________\n| Eduard Isachenkov, isachenkov.eduard26@gmail.com |\n| Едуард Iсаченков,  isachenkov.eduard26@gmail.com |\n|_______________________(c)________________________|\n";
+    cout << " __________________________________________________\n| Eduard Isachenkov, isachenkov.eduard26@gmail.com |\n|_______________________(c)________________________|\n";
 }
