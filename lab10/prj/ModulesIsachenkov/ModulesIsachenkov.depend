@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1647422319 source:c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab09\prj\modulesisachenkov\main.cpp
+	<cmath>
+	<iostream>
+	<bitset>
+
