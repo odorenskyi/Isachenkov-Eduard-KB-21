@@ -182,6 +182,8 @@ char Task_10_2(char in_path[]){
             fout << '\n';
         }
     }
+    fin.close();
+    fout.close();
 }
 
 void Task_10_3(int x, int y, int z, int b, char out_path[]){
@@ -200,6 +202,7 @@ void Task_10_3(int x, int y, int z, int b, char out_path[]){
     fout << endl;
     fout << "Число b, в двійкомову коді: =";
     fout << bin;
+    fout.close();
 }
 
 
