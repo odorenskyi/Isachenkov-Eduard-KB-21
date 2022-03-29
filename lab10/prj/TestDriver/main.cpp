@@ -20,6 +20,7 @@ int main()
     testdriver_1();
     testdriver_2();
     testdriver_3();
+    system("pause");
 
     return 0;
 }
