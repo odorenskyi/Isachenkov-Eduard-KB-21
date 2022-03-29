@@ -1,10 +1,12 @@
 #include <cmath>
 #include <iostream>
 #include <bitset>
+
 #include <fstream>
 #include <locale.h>
 #include <Windows.h>
 #include <ctime>
+#include <cstring>
 
 using namespace std;
 
@@ -74,13 +76,11 @@ char Task_10_1(char in_path[], char out_path[]){
         cout << "Помилка вiдкривання файлу №1" << endl;
     }
     else{
-        cout << "Вiдкривання файлу пройшло успiшно! №1\n" << endl;
         char ch;
         string str1, str2, str3, str4;
         int num1, num2, num3, k = 0;
         while(fin.get(ch)){
             if(ch >= 'а' && ch <= 'я') k++;
-
             if(ch != '@') str1 += ch;
             else {
                 num1 = fin.tellg();
@@ -109,7 +109,7 @@ char Task_10_1(char in_path[], char out_path[]){
             if(ch != '@') str4 += ch;
             else break;
         }
-        if(k >= 1) {
+        if(k > 2) {
             fout << annotationsUkr;
             fout << "Текст написаний Українською мовою\n\n";
             fout << '\t';
@@ -151,7 +151,6 @@ char Task_10_2(char in_path[]){
         cout << "Помилка вiдкривання файлу №2 " << endl;
     }
     else{
-        cout << "Вiдкривання файлу пройшло успiшно! №2\n" << endl;
         int koma, krapka, k;
         char ch;
         while(fin.get(ch)){
@@ -159,9 +158,7 @@ char Task_10_2(char in_path[]){
             if(ch == ',') koma++;
             if(ch == '.') krapka++;
         }
-        if (k >= 1) {
-            fout << '\n';
-            fout << ctime(&rawtime);
+        if (k >= 2) {
             fout << '\n';
             fout << "В данному тексті ком: = ";
             fout << koma;
@@ -169,10 +166,9 @@ char Task_10_2(char in_path[]){
             fout << "В данному тексті крапок: = ";
             fout << krapka;
             fout << '\n';
+            fout << ctime(&rawtime);
         }
         else {
-            fout << '\n';
-            fout << ctime(&rawtime);
             fout << '\n';
             fout << "In this text com: = ";
             fout << koma;
@@ -180,6 +176,7 @@ char Task_10_2(char in_path[]){
             fout << "In this text dots: = ";
             fout << krapka;
             fout << '\n';
+            fout << ctime(&rawtime);
         }
     }
     fin.close();
@@ -200,7 +197,7 @@ void Task_10_3(int x, int y, int z, int b, char out_path[]){
     fout << "S: = ";
     fout << s_calculation(x,y,z);
     fout << endl;
-    fout << "Число b, в двійкомову коді: =";
+    fout << "Число b, в двійкомову коді: = ";
     fout << bin;
     fout.close();
 }
