@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1650040112 source:e:\program\code blocks\codeblocks\save\bmtp\lb ¹11\modules_¹11_isachenkov\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<vector>
+	<string>
+	<cstring>
+
