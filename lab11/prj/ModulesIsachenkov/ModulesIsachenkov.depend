@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1650874660 source:c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab11\prj\modulesisachenkov\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<vector>
+	<string>
+	<cstring>
+	"struct_type_project_2.h"
+
+1650709508 c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab11\prj\h-files\struct_type_project_2.h
+
