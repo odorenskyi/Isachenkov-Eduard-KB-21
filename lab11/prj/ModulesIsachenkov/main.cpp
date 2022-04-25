@@ -10,7 +10,7 @@
 using namespace std;
 
 void printPersonalCard(entry personalCard, int i){
-    cout << "|" << setw(6) << i+1 << "|" << setw(25) << left << "Äàòà ñòâîðåííÿ:" << "|" << setw(45)
+    cout << "|" << setw(6) << i+1 << "|" << setw(25) << left << "Ð”Ð°Ñ‚Ð° ÑÑ‚Ð²Ð¾Ñ€ÐµÐ½Ð½Ñ:" << "|" << setw(45)
                  << (personalCard.creationDate.day < 10 ? "0" : "") + to_string(personalCard.creationDate.day) + "." +
                     (personalCard.creationDate.month < 10 ? "0" : "") + to_string(personalCard.creationDate.month) + "." +
                     to_string(personalCard.creationDate.year) << "|" << endl << resetiosflags(ios::left);
@@ -19,35 +19,35 @@ void printPersonalCard(entry personalCard, int i){
         cout << "|" << setw(7) << "|" << setw(25) << left;
         switch(k) {
         case 0:
-            cout << "Ðåºñòðàö³éíèé íîìåð:" << "|" << setw(45) << personalCard.regNum;
+            cout << "Ð ÐµÑ”ÑÑ‚Ñ€Ð°Ñ†Ñ–Ð¹Ð½Ð¸Ð¹ Ð½Ð¾Ð¼ÐµÑ€:" << "|" << setw(45) << personalCard.regNum;
             break;
         case 1:
-            cout << "²äåíòèô³êàö³éíèé íîìåð:" << "|" << setw(45) << personalCard.id;
+            cout << "Ð†Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ñ–ÐºÐ°Ñ†Ñ–Ð¹Ð½Ð¸Ð¹ Ð½Ð¾Ð¼ÐµÑ€:" << "|" << setw(45) << personalCard.id;
             break;
         case 2:
-            cout << "Ñòàòü:" << "|" << setw(45) << (personalCard.gender == 'm' ? "÷îëîâ³÷à" : "æ³íî÷à");
+            cout << "Ð¡Ñ‚Ð°Ñ‚ÑŒ:" << "|" << setw(45) << (personalCard.gender == 'm' ? "Ñ‡Ð¾Ð»Ð¾Ð²Ñ–Ñ‡Ð°" : "Ð¶Ñ–Ð½Ð¾Ñ‡Ð°");
             break;
         case 3:
-            cout << "Âèä ðîáîòè:" << "|" << setw(45) << (personalCard.typeOfWork == 'f' ? "îñíîâíà" : "çà ñóì³öíèñòâîì");
+            cout << "Ð’Ð¸Ð´ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¸:" << "|" << setw(45) << (personalCard.typeOfWork == 'f' ? "Ð¾ÑÐ½Ð¾Ð²Ð½Ð°" : "Ð·Ð° ÑÑƒÐ¼Ñ–Ñ†Ð½Ð¸ÑÑ‚Ð²Ð¾Ð¼");
             break;
         case 4:
-            cout << "Ï²Á ïðàö³âíèêà:" << "|" << setw(45) << personalCard.fullName;
+            cout << "ÐŸÐ†Ð‘ Ð¿Ñ€Ð°Ñ†Ñ–Ð²Ð½Ð¸ÐºÐ°:" << "|" << setw(45) << personalCard.fullName;
             break;
         case 5:
-            cout << "Äàòà íàðîäæåííÿ:" << "|" << setw(45) << (personalCard.birthDate.day < 10 ? "0" : "") +
+            cout << "Ð”Ð°Ñ‚Ð° Ð½Ð°Ñ€Ð¾Ð´Ð¶ÐµÐ½Ð½Ñ:" << "|" << setw(45) << (personalCard.birthDate.day < 10 ? "0" : "") +
             to_string(personalCard.birthDate.day) + "." + (personalCard.birthDate.month < 10 ? "0" : "") +
             to_string(personalCard.birthDate.month) + "." + to_string(personalCard.birthDate.year);
             break;
         case 6:
-            cout << "Ãðîìàäÿíñòâî:" << "|" << setw(45) << personalCard.citizenship;
+            cout << "Ð“Ñ€Ð¾Ð¼Ð°Ð´ÑÐ½ÑÑ‚Ð²Ð¾:" << "|" << setw(45) << personalCard.citizenship;
             break;
         case 7:
-            cout << "Îñâ³òà " + to_string(edc+1) + ":" << "|" << setw(45) << (personalCard.placeOfEducation[edc] == "" ? "-" :
-                                                    (personalCard.education[edc] == entry::basicSecondary ? "áàçîâà ñåðåäíÿ" :
-                                                    personalCard.education[edc] == entry::compSecondary ? "ïîâíà ñåðåäíÿ" :
-                                                    personalCard.education[edc] == entry::vocational ? "ïðîôåñ³éíî-òåõí³÷íà" :
-                                                    personalCard.education[edc] == entry::incompHigher ? "íåïîâíà âèùà" :
-                                                    personalCard.education[edc] == entry::basicHigher ? "áàçîâà âèùà" : "âèùà"));
+            cout << "ÐžÑÐ²Ñ–Ñ‚Ð° " + to_string(edc+1) + ":" << "|" << setw(45) << (personalCard.placeOfEducation[edc] == "" ? "-" :
+                                                    (personalCard.education[edc] == entry::basicSecondary ? "Ð±Ð°Ð·Ð¾Ð²Ð° ÑÐµÑ€ÐµÐ´Ð½Ñ" :
+                                                    personalCard.education[edc] == entry::compSecondary ? "Ð¿Ð¾Ð²Ð½Ð° ÑÐµÑ€ÐµÐ´Ð½Ñ" :
+                                                    personalCard.education[edc] == entry::vocational ? "Ð¿Ñ€Ð¾Ñ„ÐµÑÑ–Ð¹Ð½Ð¾-Ñ‚ÐµÑ…Ð½Ñ–Ñ‡Ð½Ð°" :
+                                                    personalCard.education[edc] == entry::incompHigher ? "Ð½ÐµÐ¿Ð¾Ð²Ð½Ð° Ð²Ð¸Ñ‰Ð°" :
+                                                    personalCard.education[edc] == entry::basicHigher ? "Ð±Ð°Ð·Ð¾Ð²Ð° Ð²Ð¸Ñ‰Ð°" : "Ð²Ð¸Ñ‰Ð°"));
             break;
         case 8:
             cout << " " << "|" << setw(45) << personalCard.placeOfEducation[edc];
@@ -58,35 +58,35 @@ void printPersonalCard(entry personalCard, int i){
             }
             break;
         case 9:
-            cout << "Îñòàííº ì³ñöå ðîáîòè:" << "|" << setw(45) << personalCard.lastPlaceOfWork;
+            cout << "ÐžÑÑ‚Ð°Ð½Ð½Ñ” Ð¼Ñ–ÑÑ†Ðµ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¸:" << "|" << setw(45) << personalCard.lastPlaceOfWork;
             break;
         case 10:
-            cout << resetiosflags(ios::left) << "ïîñàäà:    " << left << "|" << setw(45) << personalCard.lastJob;
+            cout << resetiosflags(ios::left) << "Ð¿Ð¾ÑÐ°Ð´Ð°:    " << left << "|" << setw(45) << personalCard.lastJob;
             break;
         case 11:
-            cout << "Ñòàæ ðîáîòè:" << "|" << setw(45) << (personalCard.workingExp.days != 0 ?
-            to_string(personalCard.workingExp.days) + " äí³â " : "") + (personalCard.workingExp.months != 0 ?
-            to_string(personalCard.workingExp.months) + " ì³ñÿö³â " : "") + (personalCard.workingExp.years != 0 ?
-            to_string(personalCard.workingExp.years) + " ðîê³â" : "");
+            cout << "Ð¡Ñ‚Ð°Ð¶ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¸:" << "|" << setw(45) << (personalCard.workingExp.days != 0 ?
+            to_string(personalCard.workingExp.days) + " Ð´Ð½Ñ–Ð² " : "") + (personalCard.workingExp.months != 0 ?
+            to_string(personalCard.workingExp.months) + " Ð¼Ñ–ÑÑÑ†Ñ–Ð² " : "") + (personalCard.workingExp.years != 0 ?
+            to_string(personalCard.workingExp.years) + " Ñ€Ð¾ÐºÑ–Ð²" : "");
             break;
         case 12:
-            cout << "Ì³ñöå ïðîæèâàííÿ:" << "|" << setw(45) << personalCard.placeOfLiving;
+            cout << "ÐœÑ–ÑÑ†Ðµ Ð¿Ñ€Ð¾Ð¶Ð¸Ð²Ð°Ð½Ð½Ñ:" << "|" << setw(45) << personalCard.placeOfLiving;
             break;
         case 13:
-            cout << "Ïàñïîðòí³ äàí³:" << "|" << setw(45) << personalCard.passportInfo;
+            cout << "ÐŸÐ°ÑÐ¿Ð¾Ñ€Ñ‚Ð½Ñ– Ð´Ð°Ð½Ñ–:" << "|" << setw(45) << personalCard.passportInfo;
             break;
         case 14:
-            cout << "Äîäàòêîâ³ â³äîìîñò³:" << "|" << setw(45) << personalCard.additionalInfo;
+            cout << "Ð”Ð¾Ð´Ð°Ñ‚ÐºÐ¾Ð²Ñ– Ð²Ñ–Ð´Ð¾Ð¼Ð¾ÑÑ‚Ñ–:" << "|" << setw(45) << personalCard.additionalInfo;
             break;
         case 15:
-            cout << "Äàòà çâ³ëüíåííÿ:" << "|" << setw(45) << (personalCard.dateOfFiring.day != 0 &&
+            cout << "Ð”Ð°Ñ‚Ð° Ð·Ð²Ñ–Ð»ÑŒÐ½ÐµÐ½Ð½Ñ:" << "|" << setw(45) << (personalCard.dateOfFiring.day != 0 &&
                          personalCard.dateOfFiring.month != 0 && personalCard.dateOfFiring.year != 0 ?
                         (personalCard.dateOfFiring.day < 10 ? "0" : "") + to_string(personalCard.dateOfFiring.day) + "." +
                         (personalCard.dateOfFiring.month < 10 ? "0" : "") + to_string(personalCard.dateOfFiring.month) +
                          "." + to_string(personalCard.dateOfFiring.year) : "-");
             break;
         case 16:
-            cout << resetiosflags(ios::left) << "ïðè÷èíà:         " << left << "|" << setw(45)
+            cout << resetiosflags(ios::left) << "Ð¿Ñ€Ð¸Ñ‡Ð¸Ð½Ð°:         " << left << "|" << setw(45)
                  << personalCard.reasonOfFiring;
             break;
         }
@@ -97,9 +97,9 @@ void printPersonalCard(entry personalCard, int i){
 void searchPersonalCard(vector<entry> &database, string surname){
     string lastName;
     vector<int> result;
-    cout << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ')
-         << "|" << setw(45) << "ÊÀÐÒÊÈ Ç ÏÐ²ÇÂÈÙÅÌ " << setw(33) << left << surname << resetiosflags(ios::left) << "|" << endl
-         << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ');
+    cout << "+" << setfill('â€”') << setw(79) << "+" << endl << setfill(' ')
+         << "|" << setw(45) << "ÐšÐÐ Ð¢ÐšÐ˜ Ð— ÐŸÐ Ð†Ð—Ð’Ð˜Ð©Ð•Ðœ " << setw(33) << left << surname << resetiosflags(ios::left) << "|" << endl
+         << "+" << setfill('â€”') << setw(79) << "+" << endl << setfill(' ');
     for(int i = 0; i < database.size(); i++){
         istringstream(database[i].fullName) >> lastName;
         if(lastName == surname){
@@ -109,9 +109,9 @@ void searchPersonalCard(vector<entry> &database, string surname){
     for(int i = 0; i < result.size(); i++){
         printPersonalCard(database[result[i]], result[i]);
         if(i+1 == result.size())
-            cout << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ');
+            cout << "+" << setfill('â€”') << setw(79) << "+" << endl << setfill(' ');
         else
-            cout << "+" << setfill('—') << setw(7) << "+" << setw(26) << "+" << setw(46) << "+" << setfill(' ') << endl;
+            cout << "+" << setfill('â€”') << setw(7) << "+" << setw(26) << "+" << setw(46) << "+" << setfill(' ') << endl;
     }
 }
 
@@ -122,24 +122,24 @@ void showDatabase(vector<entry> &database){
     char option;
     do {
         cout << "+==============================================================+" << endl
-             << " Âè õî÷åòå âèâåñòè áàçó äàíèõ íà êîíñîëü (c) àáî ó ôàéë (t) - ";
+             << " Ð’Ð¸ Ñ…Ð¾Ñ‡ÐµÑ‚Ðµ Ð²Ð¸Ð²ÐµÑÑ‚Ð¸ Ð±Ð°Ð·Ñƒ Ð´Ð°Ð½Ð¸Ñ… Ð½Ð° ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ (c) Ð°Ð±Ð¾ Ñƒ Ñ„Ð°Ð¹Ð» (t) - ";
         cin >> option;
         cout << "+==============================================================+" << endl;
-    }while (option != 'c' && option != 't' && option != 'C' && option != 'T' && option != 'å' && option != 'Å');
+    }while (option != 'c' && option != 't' && option != 'C' && option != 'T' && option != 'Ðµ' && option != 'Ð•');
     do {
         string filename = "";
-        if (option == 't' || option == 'T' || option == 'å' || option == 'Å') {
-            cout << " Ââåä³òü íàçâó ôàéëó: ";
+        if (option == 't' || option == 'T' || option == 'Ðµ' || option == 'Ð•') {
+            cout << " Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð°Ð·Ð²Ñƒ Ñ„Ð°Ð¹Ð»Ñƒ: ";
             cin >> filename;
             cout << "+==============================================================+" << endl;
             fout.open(filename, ios::out);
         }
         if (option == 'c' || fout.is_open()) {
-            OUT(option) << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ')
-                        << "|" << setw(63) << "Â²ÄÄ²Ë ÊÀÄÐ²Â: ÎÑÎÁÎÂÀ ÊÀÐÒÊÀ ÏÐÀÖ²ÂÍÈÊÀ, Ô. Ï-2" << setw(16) << "|" << endl
-                        << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ');
+            OUT(option) << "+" << setfill('â€”') << setw(79) << "+" << endl << setfill(' ')
+                        << "|" << setw(63) << "Ð’Ð†Ð”Ð”Ð†Ð› ÐšÐÐ”Ð Ð†Ð’: ÐžÐ¡ÐžÐ‘ÐžÐ’Ð ÐšÐÐ Ð¢ÐšÐ ÐŸÐ ÐÐ¦Ð†Ð’ÐÐ˜ÐšÐ, Ð¤. ÐŸ-2" << setw(16) << "|" << endl
+                        << "+" << setfill('â€”') << setw(79) << "+" << endl << setfill(' ');
             for (int i = 0; i < database.size(); i++) {
-                OUT(option) << "|" << setw(6) << i+1 << "|" << setw(25) << left << "Äàòà ñòâîðåííÿ:" << "|" << setw(45)
+                OUT(option) << "|" << setw(6) << i+1 << "|" << setw(25) << left << "Ð”Ð°Ñ‚Ð° ÑÑ‚Ð²Ð¾Ñ€ÐµÐ½Ð½Ñ:" << "|" << setw(45)
                                    << (database[i].creationDate.day < 10 ? "0" : "") + to_string(database[i].creationDate.day) + "." +
                                       (database[i].creationDate.month < 10 ? "0" : "") + to_string(database[i].creationDate.month) + "." +
                                       to_string(database[i].creationDate.year) << "|" << endl << resetiosflags(ios::left);
@@ -148,35 +148,35 @@ void showDatabase(vector<entry> &database){
                     OUT(option) << "|" << setw(7) << "|" << setw(25) << left;
                     switch(j) {
                     case 0:
-                        OUT(option) << "Ðåºñòðàö³éíèé íîìåð:" << "|" << setw(45) << database[i].regNum;
+                        OUT(option) << "Ð ÐµÑ”ÑÑ‚Ñ€Ð°Ñ†Ñ–Ð¹Ð½Ð¸Ð¹ Ð½Ð¾Ð¼ÐµÑ€:" << "|" << setw(45) << database[i].regNum;
                         break;
                     case 1:
-                        OUT(option) << "²äåíòèô³êàö³éíèé íîìåð:" << "|" << setw(45) << database[i].id;
+                        OUT(option) << "Ð†Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ñ–ÐºÐ°Ñ†Ñ–Ð¹Ð½Ð¸Ð¹ Ð½Ð¾Ð¼ÐµÑ€:" << "|" << setw(45) << database[i].id;
                         break;
                     case 2:
-                        OUT(option) << "Ñòàòü:" << "|" << setw(45) << (database[i].gender == 'm' ? "÷îëîâ³÷à" : "æ³íî÷à");
+                        OUT(option) << "Ð¡Ñ‚Ð°Ñ‚ÑŒ:" << "|" << setw(45) << (database[i].gender == 'm' ? "Ñ‡Ð¾Ð»Ð¾Ð²Ñ–Ñ‡Ð°" : "Ð¶Ñ–Ð½Ð¾Ñ‡Ð°");
                         break;
                     case 3:
-                        OUT(option) << "Âèä ðîáîòè:" << "|" << setw(45) << (database[i].typeOfWork == 'f' ? "îñíîâíà" : "çà ñóì³öíèñòâîì");
+                        OUT(option) << "Ð’Ð¸Ð´ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¸:" << "|" << setw(45) << (database[i].typeOfWork == 'f' ? "Ð¾ÑÐ½Ð¾Ð²Ð½Ð°" : "Ð·Ð° ÑÑƒÐ¼Ñ–Ñ†Ð½Ð¸ÑÑ‚Ð²Ð¾Ð¼");
                         break;
                     case 4:
-                        OUT(option) << "Ï²Á ïðàö³âíèêà:" << "|" << setw(45) << database[i].fullName;
+                        OUT(option) << "ÐŸÐ†Ð‘ Ð¿Ñ€Ð°Ñ†Ñ–Ð²Ð½Ð¸ÐºÐ°:" << "|" << setw(45) << database[i].fullName;
                         break;
                     case 5:
-                        OUT(option) << "Äàòà íàðîäæåííÿ:" << "|" << setw(45) << (database[i].birthDate.day < 10 ? "0" : "") +
+                        OUT(option) << "Ð”Ð°Ñ‚Ð° Ð½Ð°Ñ€Ð¾Ð´Ð¶ÐµÐ½Ð½Ñ:" << "|" << setw(45) << (database[i].birthDate.day < 10 ? "0" : "") +
                                         to_string(database[i].birthDate.day) + "." + (database[i].birthDate.month < 10 ? "0" : "") +
                                         to_string(database[i].birthDate.month) + "." + to_string(database[i].birthDate.year);
                         break;
                     case 6:
-                        OUT(option) << "Ãðîìàäÿíñòâî:" << "|" << setw(45) << database[i].citizenship;
+                        OUT(option) << "Ð“Ñ€Ð¾Ð¼Ð°Ð´ÑÐ½ÑÑ‚Ð²Ð¾:" << "|" << setw(45) << database[i].citizenship;
                         break;
                     case 7:
-                        OUT(option) << "Îñâ³òà " + to_string(edc+1) + ":" << "|" << setw(45) << (database[i].placeOfEducation[edc] == "" ? "-" :
-                                                                  (database[i].education[edc] == entry::basicSecondary ? "áàçîâà ñåðåäíÿ" :
-                                                                   database[i].education[edc] == entry::compSecondary ? "ïîâíà ñåðåäíÿ" :
-                                                                   database[i].education[edc] == entry::vocational ? "ïðîôåñ³éíî-òåõí³÷íà" :
-                                                                   database[i].education[edc] == entry::incompHigher ? "íåïîâíà âèùà" :
-                                                                   database[i].education[edc] == entry::basicHigher ? "áàçîâà âèùà" : "âèùà"));
+                        OUT(option) << "ÐžÑÐ²Ñ–Ñ‚Ð° " + to_string(edc+1) + ":" << "|" << setw(45) << (database[i].placeOfEducation[edc] == "" ? "-" :
+                                                                  (database[i].education[edc] == entry::basicSecondary ? "Ð±Ð°Ð·Ð¾Ð²Ð° ÑÐµÑ€ÐµÐ´Ð½Ñ" :
+                                                                   database[i].education[edc] == entry::compSecondary ? "Ð¿Ð¾Ð²Ð½Ð° ÑÐµÑ€ÐµÐ´Ð½Ñ" :
+                                                                   database[i].education[edc] == entry::vocational ? "Ð¿Ñ€Ð¾Ñ„ÐµÑÑ–Ð¹Ð½Ð¾-Ñ‚ÐµÑ…Ð½Ñ–Ñ‡Ð½Ð°" :
+                                                                   database[i].education[edc] == entry::incompHigher ? "Ð½ÐµÐ¿Ð¾Ð²Ð½Ð° Ð²Ð¸Ñ‰Ð°" :
+                                                                   database[i].education[edc] == entry::basicHigher ? "Ð±Ð°Ð·Ð¾Ð²Ð° Ð²Ð¸Ñ‰Ð°" : "Ð²Ð¸Ñ‰Ð°"));
                         break;
                     case 8:
                         OUT(option) << " " << "|" << setw(45) << database[i].placeOfEducation[edc];
@@ -185,44 +185,44 @@ void showDatabase(vector<entry> &database){
                         }
                         break;
                     case 9:
-                        OUT(option) << "Îñòàííº ì³ñöå ðîáîòè:" << "|" << setw(45) << database[i].lastPlaceOfWork;
+                        OUT(option) << "ÐžÑÑ‚Ð°Ð½Ð½Ñ” Ð¼Ñ–ÑÑ†Ðµ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¸:" << "|" << setw(45) << database[i].lastPlaceOfWork;
                         break;
                     case 10:
-                        OUT(option) << resetiosflags(ios::left) << "ïîñàäà:    " << left << "|" << setw(45) << database[i].lastJob;
+                        OUT(option) << resetiosflags(ios::left) << "Ð¿Ð¾ÑÐ°Ð´Ð°:    " << left << "|" << setw(45) << database[i].lastJob;
                         break;
                     case 11:
-                        OUT(option) << "Ñòàæ ðîáîòè:" << "|" << setw(45) << (database[i].workingExp.days != 0 ?
-                                        to_string(database[i].workingExp.days) + " äí³â " : "") + (database[i].workingExp.months != 0 ?
-                                        to_string(database[i].workingExp.months) + " ì³ñÿö³â " : "") + (database[i].workingExp.years != 0 ?
-                                        to_string(database[i].workingExp.years) + " ðîê³â" : "");
+                        OUT(option) << "Ð¡Ñ‚Ð°Ð¶ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¸:" << "|" << setw(45) << (database[i].workingExp.days != 0 ?
+                                        to_string(database[i].workingExp.days) + " Ð´Ð½Ñ–Ð² " : "") + (database[i].workingExp.months != 0 ?
+                                        to_string(database[i].workingExp.months) + " Ð¼Ñ–ÑÑÑ†Ñ–Ð² " : "") + (database[i].workingExp.years != 0 ?
+                                        to_string(database[i].workingExp.years) + " Ñ€Ð¾ÐºÑ–Ð²" : "");
                         break;
                     case 12:
-                        OUT(option) << "Ì³ñöå ïðîæèâàííÿ:" << "|" << setw(45) << database[i].placeOfLiving;
+                        OUT(option) << "ÐœÑ–ÑÑ†Ðµ Ð¿Ñ€Ð¾Ð¶Ð¸Ð²Ð°Ð½Ð½Ñ:" << "|" << setw(45) << database[i].placeOfLiving;
                         break;
                     case 13:
-                        OUT(option) << "Ïàñïîðòí³ äàí³:" << "|" << setw(45) << database[i].passportInfo;
+                        OUT(option) << "ÐŸÐ°ÑÐ¿Ð¾Ñ€Ñ‚Ð½Ñ– Ð´Ð°Ð½Ñ–:" << "|" << setw(45) << database[i].passportInfo;
                         break;
                     case 14:
-                        OUT(option) << "Äîäàòêîâ³ â³äîìîñò³:" << "|" << setw(45) << database[i].additionalInfo;
+                        OUT(option) << "Ð”Ð¾Ð´Ð°Ñ‚ÐºÐ¾Ð²Ñ– Ð²Ñ–Ð´Ð¾Ð¼Ð¾ÑÑ‚Ñ–:" << "|" << setw(45) << database[i].additionalInfo;
                         break;
                     case 15:
-                        OUT(option) << "Äàòà çâ³ëüíåííÿ:" << "|" << setw(45) << (database[i].dateOfFiring.day != 0 &&
+                        OUT(option) << "Ð”Ð°Ñ‚Ð° Ð·Ð²Ñ–Ð»ÑŒÐ½ÐµÐ½Ð½Ñ:" << "|" << setw(45) << (database[i].dateOfFiring.day != 0 &&
                                         database[i].dateOfFiring.month != 0 && database[i].dateOfFiring.year != 0 ?
                                         (database[i].dateOfFiring.day < 10 ? "0" : "") + to_string(database[i].dateOfFiring.day) + "." +
                                         (database[i].dateOfFiring.month < 10 ? "0" : "") + to_string(database[i].dateOfFiring.month) +
                                         "." + to_string(database[i].dateOfFiring.year) : "-");
                         break;
                     case 16:
-                        OUT(option) << resetiosflags(ios::left) << "ïðè÷èíà:         " << left << "|" << setw(45)
+                        OUT(option) << resetiosflags(ios::left) << "Ð¿Ñ€Ð¸Ñ‡Ð¸Ð½Ð°:         " << left << "|" << setw(45)
                                     << database[i].reasonOfFiring;
                         break;
                     }
                     OUT(option) << "|" << endl << resetiosflags(ios::left);
                 }
                 if (i+1 != database.size())
-                    OUT(option) << "+" << setfill('—') << setw(7) << "+" << setw(26) << "+" << setw(46) << "+" << setfill(' ') << endl;
+                    OUT(option) << "+" << setfill('â€”') << setw(7) << "+" << setw(26) << "+" << setw(46) << "+" << setfill(' ') << endl;
                 else
-                    OUT(option) << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ');
+                    OUT(option) << "+" << setfill('â€”') << setw(79) << "+" << endl << setfill(' ');
             }
             if (fout.is_open()) fout.close();
         }
