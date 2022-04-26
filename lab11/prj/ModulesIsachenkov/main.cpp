@@ -185,16 +185,19 @@ void showDatabase(vector<entry> &database){
                         }
                         break;
                     case 9:
-                        OUT(option) << "Останнє місце роботи:" << "|" << setw(45) << database[i].lastPlaceOfWork;
+                        OUT(option) << "Останнє місце роботи:" << "|" << setw(45) << (database[i].lastPlaceOfWork == ""
+                                                                                    ? "-" : database[i].lastPlaceOfWork);
                         break;
                     case 10:
-                        OUT(option) << resetiosflags(ios::left) << "посада:    " << left << "|" << setw(45) << database[i].lastJob;
+                        OUT(option) << resetiosflags(ios::left) << "посада:    " << left << "|" << setw(45) << (database[i].lastJob == ""
+                                                                                                                ? "-" : database[i].lastJob);
                         break;
                     case 11:
-                        OUT(option) << "Стаж роботи:" << "|" << setw(45) << (database[i].workingExp.days != 0 ?
-                                        to_string(database[i].workingExp.days) + " днів " : "") + (database[i].workingExp.months != 0 ?
-                                        to_string(database[i].workingExp.months) + " місяців " : "") + (database[i].workingExp.years != 0 ?
-                                        to_string(database[i].workingExp.years) + " років" : "");
+                        OUT(option) << "Стаж роботи:" << "|" << setw(45) << (database[i].workingExp.days != 0 &&
+                                        database[i].workingExp.months != 0 && database[i].workingExp.years != 0 ?
+                                        (database[i].workingExp.days != 0 ? to_string(database[i].workingExp.days) + " днів " : "") +
+                                        (database[i].workingExp.months != 0 ? to_string(database[i].workingExp.months) + " місяців " : "") +
+                                        (database[i].workingExp.years != 0 ? to_string(database[i].workingExp.years) + " років" : "") : "-");
                         break;
                     case 12:
                         OUT(option) << "Місце проживання:" << "|" << setw(45) << database[i].placeOfLiving;
@@ -203,7 +206,8 @@ void showDatabase(vector<entry> &database){
                         OUT(option) << "Паспортні дані:" << "|" << setw(45) << database[i].passportInfo;
                         break;
                     case 14:
-                        OUT(option) << "Додаткові відомості:" << "|" << setw(45) << database[i].additionalInfo;
+                        OUT(option) << "Додаткові відомості:" << "|" << setw(45) << (database[i].additionalInfo == ""
+                                                                                    ? "-" : database[i].additionalInfo);
                         break;
                     case 15:
                         OUT(option) << "Дата звільнення:" << "|" << setw(45) << (database[i].dateOfFiring.day != 0 &&
@@ -214,7 +218,7 @@ void showDatabase(vector<entry> &database){
                         break;
                     case 16:
                         OUT(option) << resetiosflags(ios::left) << "причина:         " << left << "|" << setw(45)
-                                    << database[i].reasonOfFiring;
+                                    << (database[i].reasonOfFiring == "" ? "-" : database[i].reasonOfFiring);
                         break;
                     }
                     OUT(option) << "|" << endl << resetiosflags(ios::left);
