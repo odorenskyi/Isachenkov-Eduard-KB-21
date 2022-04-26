@@ -225,12 +225,12 @@ void showDatabase(vector<entry> &database){
                     OUT(option) << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ');
             }
             if (fout.is_open()) fout.close();
+            break;
         }
         else {
-            cerr << "Error occured while writing to " << filename << ". Try again." << endl;
-            continue;
+            cerr << "Сталася помилка під час написання " << filename << ". Спробуйте ще раз." << endl;
         }
-    }while (false);     // continue; as iterator
+    }while (true);
 
     #undef OUT(option)
 }
