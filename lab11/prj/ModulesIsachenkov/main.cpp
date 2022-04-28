@@ -58,10 +58,12 @@ void printPersonalCard(entry personalCard, int i){
             }
             break;
         case 9:
-            cout << "Останнє місце роботи:" << "|" << setw(45) << personalCard.lastPlaceOfWork;
+            cout << "Останнє місце роботи:" << "|" << setw(45)
+                 << (personalCard.lastPlaceOfWork == "" ? "-" : personalCard.lastPlaceOfWork);
             break;
         case 10:
-            cout << resetiosflags(ios::left) << "посада:    " << left << "|" << setw(45) << personalCard.lastJob;
+            cout << resetiosflags(ios::left) << "посада:    " << left << "|" << setw(45)
+                 << (personalCard.lastJob == "" ? "-" : personalCard.lastJob);
             break;
         case 11:
             cout << "Стаж роботи:" << "|" << setw(45) << (personalCard.workingExp.days != 0 ?
@@ -76,7 +78,8 @@ void printPersonalCard(entry personalCard, int i){
             cout << "Паспортні дані:" << "|" << setw(45) << personalCard.passportInfo;
             break;
         case 14:
-            cout << "Додаткові відомості:" << "|" << setw(45) << personalCard.additionalInfo;
+            cout << "Додаткові відомості:" << "|" << setw(45)
+                << (personalCard.additionalInfo == "" ? "-" : personalCard.additionalInfo);
             break;
         case 15:
             cout << "Дата звільнення:" << "|" << setw(45) << (personalCard.dateOfFiring.day != 0 &&
@@ -87,7 +90,7 @@ void printPersonalCard(entry personalCard, int i){
             break;
         case 16:
             cout << resetiosflags(ios::left) << "причина:         " << left << "|" << setw(45)
-                 << personalCard.reasonOfFiring;
+                 << (personalCard.reasonOfFiring  == "" ? "-" : personalCard.reasonOfFiring);
             break;
         }
         cout << "|" << endl << resetiosflags(ios::left);
@@ -185,12 +188,12 @@ void showDatabase(vector<entry> &database){
                         }
                         break;
                     case 9:
-                        OUT(option) << "Останнє місце роботи:" << "|" << setw(45) << (database[i].lastPlaceOfWork == ""
-                                                                                    ? "-" : database[i].lastPlaceOfWork);
+                        OUT(option) << "Останнє місце роботи:" << "|" << setw(45)
+                                    << (database[i].lastPlaceOfWork == "" ? "-" : database[i].lastPlaceOfWork);
                         break;
                     case 10:
-                        OUT(option) << resetiosflags(ios::left) << "посада:    " << left << "|" << setw(45) << (database[i].lastJob == ""
-                                                                                                                ? "-" : database[i].lastJob);
+                        OUT(option) << resetiosflags(ios::left) << "посада:    " << left << "|" << setw(45)
+                                    << (database[i].lastJob == "" ? "-" : database[i].lastJob);
                         break;
                     case 11:
                         OUT(option) << "Стаж роботи:" << "|" << setw(45) << (database[i].workingExp.days != 0 &&
@@ -206,8 +209,8 @@ void showDatabase(vector<entry> &database){
                         OUT(option) << "Паспортні дані:" << "|" << setw(45) << database[i].passportInfo;
                         break;
                     case 14:
-                        OUT(option) << "Додаткові відомості:" << "|" << setw(45) << (database[i].additionalInfo == ""
-                                                                                    ? "-" : database[i].additionalInfo);
+                        OUT(option) << "Додаткові відомості:" << "|" << setw(45)
+                                    << (database[i].additionalInfo == "" ? "-" : database[i].additionalInfo);
                         break;
                     case 15:
                         OUT(option) << "Дата звільнення:" << "|" << setw(45) << (database[i].dateOfFiring.day != 0 &&
