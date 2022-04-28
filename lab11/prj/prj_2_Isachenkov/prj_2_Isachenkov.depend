@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1651060310 source:e:\program\code blocks\codeblocks\save\bmtp\lb ¹11\prj_2_isachenkov\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<vector>
+	<string>
+	<cstring>
+	"ModulesIsachenkov.h"
+	"ModulesKozlov.h"
+	"ModulesZadorozhny.h"
+
+1650874920 c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab11\prj\h-files\modulesisachenkov.h
+	"struct_type_project_2.h"
+
+1650709508 c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab11\prj\h-files\struct_type_project_2.h
+
+1651058926 c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab11\prj\h-files\moduleskozlov.h
+	<vector>
+	<struct_type_project_2.h>
+
+1651072577 c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab11\prj\h-files\moduleszadorozhny.h
+	<vector>
+	"struct_type_project_2.h"
+
