@@ -23,3 +23,14 @@
 	<vector>
 	"struct_type_project_2.h"
 
+1651060310 source:c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab11\prj\prj_2_isachenkov\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<vector>
+	<string>
+	<cstring>
+	"ModulesIsachenkov.h"
+	"ModulesKozlov.h"
+	"ModulesZadorozhny.h"
+
