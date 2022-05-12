@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1652347451 source:e:\program\code blocks\codeblocks\save\bmtp\lb ¹12\teacher\main.cpp
+	<iostream>
+	<fstream>
+	"ModulesIsachenkov.h"
+
+1652362928 c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab12\prj\h-files\modulesisachenkov.h
+
+1652361557 source:c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab12\prj\teacher\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"ModulesIsachenkov.h"
+
+1652344721 c:\users\user\desktop\github\isachenkov-eduard-kb-21\lab12\prj\modulesisachenkov.h
+
